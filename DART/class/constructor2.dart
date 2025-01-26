@@ -1,7 +1,14 @@
 void main(){
 
-  person obj = person(name: "Anas" , age: 22);
-  obj.display();
+  List <person> data = [
+    person(name: "Anas" , age: 22),
+    person(name: "Anas" , age: 22),
+    person(name: "Anas" , age: 22)
+  ];
+
+  data.forEach((e) {
+    print("Name : ${e.name} , Age : ${e.age}");
+  });
 }
 
 class person{
@@ -9,7 +16,7 @@ class person{
   String? name;
   int? age;
 
-  person({this.name , this.age});
+  person({required this.name , this.age = 22});
 
   display(){
 
